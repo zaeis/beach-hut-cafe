@@ -3,11 +3,11 @@ import preact from "@astrojs/preact";
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://feature-tour.netlify.app',
+  site: 'https://beach-hut-cafe.com',
   integrations: [
     preact(),
     sitemap({
-      canonicalURL: 'https://feature-tour.netlify.app'
+      canonicalURL: 'https://beach-hut-cafe.com'
     })
   ],
 });
