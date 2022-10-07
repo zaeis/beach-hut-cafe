@@ -138,26 +138,27 @@ import Layout from "../components/layout.astro";
     border-radius: 100%;
     display: inline-block;
     height: var(--rem);
-    line-height: 1;
+    line-height: 0.3rem;
     padding: calc(0.25 * var(--rem));
     text-align: center;
     width: calc(1.5 * var(--rem));
+    font-size: smaller;
+    font-weight: bold;
   }
 
   .d.v {
-    background: #00f900;
+    background: #cbef43;
     color: #004700;
   }
 
   .d.vg {
-    background: #7fb04d;
-    border-radius: 100%;
+    background: #8de969;
     color: #14170d;
   }
 
-  .seafood {
-    color: #005c75;
-    font-weight: bold;
+  .d.seafood {
+    background: #afe0ce;
+    color: #14170d;
   }
 
   table {
@@ -405,7 +406,7 @@ import Layout from "../components/layout.astro";
                   <strong>Scampi (wholetail) and Chips</strong>
                 </th>
                 <td class="price">£7.25</td>
-                <td class="diet"></td>
+                <td class="diet"><span class="d seafood">S</span></td>
               </tr>
               <tr>
                 <th scope="row">
@@ -653,14 +654,14 @@ import Layout from "../components/layout.astro";
                   <strong>Crab Sandwich (When available)</strong>
                 </th>
                 <td class="price">£5.50</td>
-                <td class="diet"></td>
+                <td class="diet"><span class="d seafood">S</span></td>
               </tr>
               <tr>
                 <th scope="row">
                   <strong>Prawn Mayo Sandwich (When available)</strong>
                 </th>
                 <td class="price">£5.50</td>
-                <td class="diet"></td>
+                <td class="diet"><span class="d seafood">S</span></td>
               </tr>
             </tbody>
           </table>
