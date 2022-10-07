@@ -39,6 +39,17 @@ import Layout from "../components/layout.astro";
     text-align: left;
     margin-bottom: 1rem;
   }
+  .stept {
+    background: var(--white);
+    border: 1px solid var(--lightBorder);
+    border-radius: 4px;
+    /* display: flex; */
+    flex-direction: column;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem 1rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
 
   .stepHeading {
     font-size: 1rem;
@@ -188,6 +199,7 @@ import Layout from "../components/layout.astro";
       <h2 class="button" x-on:click="open = ! open">Food</h2>
       <section x-show="open" x-transition>
         <section x-data="{ open: false }">
+          <!-- All day break -->
           <h3 class="buttont" x-on:click="open = ! open">All Day Breakfast</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -261,6 +273,7 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Loaded chip -->
           <h3 class="buttont" x-on:click="open = ! open">Loaded Chips</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -317,6 +330,7 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Sides -->
           <h3 class="buttont" x-on:click="open = ! open">Sides</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -375,6 +389,7 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Mains -->
           <h3 class="buttont" x-on:click="open = ! open">Mains</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -456,6 +471,7 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Jacket potato -->
           <h3 class="buttont" x-on:click="open = ! open">Jacket Potatoes</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -520,15 +536,16 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Childrens Meals -->
           <h3 class="buttont" x-on:click="open = ! open">Childrens Meals</h3>
-          <div class="step" x-show="open" x-transition>
+          <div class="stept" x-show="open" x-transition>
             <h4>
               All meals available in a box for £3.80 or in a bucket with spade
               for £4.80. Eat in or takeaway.
             </h4>
             <section x-data="{ open: false }">
               <h3 class="buttonc" x-on:click="open = ! open">Cold Meals</h3>
-              <table class="step" x-show="open" x-transition>
+              <table class="stept" x-show="open" x-transition>
                 <tbody>
                   <tr>
                     <th scope="row">
@@ -544,7 +561,7 @@ import Layout from "../components/layout.astro";
             </section>
             <section x-data="{ open: false }">
               <h3 class="buttonc" x-on:click="open = ! open">Hot Meals</h3>
-              <table class="step" x-show="open" x-transition>
+              <table class="stept" x-show="open" x-transition>
                 <tbody>
                   <tr>
                     <th scope="row">
@@ -563,6 +580,7 @@ import Layout from "../components/layout.astro";
           </div>
         </section>
         <section x-data="{ open: false }">
+          <!-- Rolls -->
           <h3 class="buttont" x-on:click="open = ! open">Rolls</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -648,6 +666,7 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Sauces -->
           <h3 class="buttont" x-on:click="open = ! open">Sauces</h3>
           <table class="step" x-show="open" x-transition>
             <tbody>
@@ -730,11 +749,11 @@ import Layout from "../components/layout.astro";
     <section x-data="{ open: false }">
       <h2 class="button" x-on:click="open = ! open">Drinks</h2>
 
-      <div class="step" x-show="open" x-transition>
+      <div class="stept" x-show="open" x-transition>
         <h4>Our selection of syrups to be added to a drink of your choice</h4>
         <section x-data="{ open: false }">
           <h3 class="buttonc" x-on:click="open = ! open">Drinks</h3>
-          <table class="doubled step" x-show="open" x-transition>
+          <table class="doubled stept" x-show="open" x-transition>
             <tbody>
               <tr>
                 <th scope="row">
@@ -811,7 +830,7 @@ import Layout from "../components/layout.astro";
         </section>
         <section x-data="{ open: false }">
           <h3 class="buttonc" x-on:click="open = ! open">Syrups</h3>
-          <table class="doubled step" x-show="open" x-transition>
+          <table class="doubled stept" x-show="open" x-transition>
             <tbody>
               <tr>
                 <th scope="row">
