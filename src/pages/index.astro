@@ -574,6 +574,91 @@ import Layout from "../components/layout.astro";
             </section>
           </div>
         </section>
+        <section x-data="{ open: false }">
+          <h3 class="buttont" x-on:click="open = ! open">Rolls</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <th>Add onions to any roll for 20p</th>
+              <tr>
+                <th scope="row">
+                  <strong>Strawberry & Jam</strong>
+                </th>
+                <td class="price">£2.10</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese</strong>
+                </th>
+                <td class="price">£2.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese & Tomato</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo</strong>
+                </th>
+                <td class="price">£2.65</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo & Tomato</strong>
+                </th>
+                <td class="price">£2.95</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo & Cheese</strong>
+                </th>
+                <td class="price">£3.35</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham & Tomato</strong>
+                </th>
+                <td class="price">£2.80</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham & Cheese</strong>
+                </th>
+                <td class="price">£3.20</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Crab Sandwich (When available)</strong>
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Prawn Mayo Sandwich (When available)</strong>
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
     </section>
     <section x-data="{ open: false }">
