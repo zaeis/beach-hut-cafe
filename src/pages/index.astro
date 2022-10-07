@@ -533,7 +533,7 @@ import Layout from "../components/layout.astro";
         </section>
         <section x-data="{ open: false }">
           <h3 class="buttont" x-on:click="open = ! open">Childrens Meals</h3>
-          <div class="step">
+          <div class="step" x-show="open" x-transition>
             <h4>
               All meals available in a box for £3.80 or in a bucket with spade
               for £4.80. Eat in or takeaway.
