@@ -659,6 +659,83 @@ import Layout from "../components/layout.astro";
             </tbody>
           </table>
         </section>
+        <section x-data="{ open: false }">
+          <h3 class="buttont" x-on:click="open = ! open">Sauces</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Mayonaise</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Garlic Mayonaise</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>BBQ Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Vegan Mayonaise</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sweet Chilli Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Buffalo Hot Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Burger Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Mustard</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ketchup</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Brown Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
     </section>
     <section x-data="{ open: false }">
