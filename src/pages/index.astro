@@ -70,11 +70,25 @@ import Layout from "../components/layout.astro";
     /* width: max-content; */
   }
 
+  .buttonc {
+    background: #caf0f8;
+    border-radius: 4px;
+    color: var(--first-color);
+    /* display: inline-block; */
+    font-weight: 600;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0.5rem;
+    text-decoration: none;
+    /* width: max-content; */
+  }
+
   :root {
     --base-font-size: 12px;
     --fluid-typography-ratio: 0.9;
     --rem: calc(var(--base-font-size) + var(--fluid-typography-ratio) * 0.5vw);
   }
+
   h1,
   h2 {
     color: #924a04;
@@ -514,42 +528,52 @@ import Layout from "../components/layout.astro";
                 <td class="price">£6.00</td>
                 <td class="diet"><span class="d vg">Vg</span></td>
               </tr>
-              <!-- <tr>
-              <th scope="row">
-                <strong>Sausage & Gravy</strong>
-              </th>
-              <td class="price">£6.00</td>
-              <td class="diet"></td>
-            </tr> -->
             </tbody>
           </table>
         </section>
-
-        <!-- <table>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <strong>Children's Box Meals</strong>
-              </th>
-              <td class="price">£3.80</td>
-              <td class="diet"><span class="d v">V</span></td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <strong>Bucket Meals</strong>
-              </th>
-              <td class="price">£4.80</td>
-              <td class="diet"><span class="d v">V</span></td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <strong>Freshly Filled Rolls</strong>
-              </th>
-              <td class="price">From £2.10</td>
-              <td class="diet"><span class="d v">V</span></td>
-            </tr>
-          </tbody>
-        </table> -->
+        <section x-data="{ open: false }">
+          <h3 class="buttont" x-on:click="open = ! open">Childrens Meals</h3>
+          <div class="step">
+            <h4>
+              All meals available in a box for £3.80 or in a bucket with spade
+              for £4.80. Eat in or takeaway.
+            </h4>
+            <section x-data="{ open: false }">
+              <h3 class="buttonc" x-on:click="open = ! open">Cold Meals</h3>
+              <table class="step" x-show="open" x-transition>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <strong>Cheese Roll/Jam roll</strong><br />
+                      +Packet of pom bear potato snacks<br />
+                      +Carton of juice or Bottled water
+                    </th>
+                    <td class="price"></td>
+                    <td class="diet"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section x-data="{ open: false }">
+              <h3 class="buttonc" x-on:click="open = ! open">Hot Meals</h3>
+              <table class="step" x-show="open" x-transition>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <strong
+                        >Chicken Nuggets/2oz Burger/Sausage/Fish Cake</strong
+                      ><br />
+                      +Chips<br />
+                      +Carton of juice or Bottled water
+                    </th>
+                    <td class="price"></td>
+                    <td class="diet"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </section>
       </section>
     </section>
     <section x-data="{ open: false }">
