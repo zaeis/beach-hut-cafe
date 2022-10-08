@@ -186,6 +186,13 @@ import Layout from "../components/layout.astro";
     padding-left: 0.5rem;
     text-align: right;
   }
+
+  .types {
+    font-size: calc(0.8 * var(--rem));
+  }
+  .types span {
+    margin-left: 0.5rem;
+  }
 </style>
 
 <Layout
@@ -891,6 +898,11 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
       </div>
+      <section class="types">
+        <span class="d v">V</span> Vegetarian
+        <span class="d vg">Vg</span> Vegan
+        <span class="d seafood">S</span> Seafood
+      </section>
     </section>
   </main>
 </Layout>
