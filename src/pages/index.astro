@@ -543,21 +543,6 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
-          <!-- Sides -->
-          <h3 class="buttont" x-on:click="open = ! open">Sides</h3>
-          <table class="step" x-show="open" x-transition>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  <strong>Toasted Tea Cake</strong>
-                </th>
-                <td class="price">£2.50</td>
-                <td class="diet"><span class="d v">V</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section x-data="{ open: false }">
           <!-- Jacket potato -->
           <h3 class="buttont" x-on:click="open = ! open">Jacket Potatoes</h3>
           <table class="step" x-show="open" x-transition>
@@ -578,7 +563,8 @@ import Layout from "../components/layout.astro";
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Cheese</strong>
+                  <strong>Cheese</strong><br />
+                  Add Bacon +£1.10
                 </th>
                 <td class="price">£4.70</td>
                 <td class="diet"><span class="d v">V</span></td>
@@ -587,37 +573,43 @@ import Layout from "../components/layout.astro";
                 <th scope="row">
                   <strong>Beans and Cheese</strong>
                 </th>
-                <td class="price">£5.40</td>
+                <td class="price">£5.90</td>
                 <td class="diet"><span class="d v">V</span></td>
               </tr>
               <tr>
                 <th scope="row">
                   <strong>Tuna Mayo</strong>
                 </th>
-                <td class="price">£5.50</td>
+                <td class="price">£5.90</td>
                 <td class="diet"></td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Tuna Mayo & Cheese</strong>
+                  <strong>Tuna Mayo and Cheese</strong>
                 </th>
                 <td class="price">£6.70</td>
                 <td class="diet"></td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Prawn Mayo</strong>
-                </th>
-                <td class="price">£7.00</td>
-                <td class="diet"><span class="d seafood">S</span></td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <strong>Chilli</strong><br />
-                  Add cheese £1.20
+                  <strong>Chilli</strong>
                 </th>
                 <td class="price">£6.00</td>
                 <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chilli and Cheese</strong>
+                </th>
+                <td class="price">£7.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Prawn Mayo - Seasonal</strong>
+                </th>
+                <td class="price">£7.00</td>
+                <td class="diet"><span class="d seafood">S</span></td>
               </tr>
             </tbody>
           </table>
@@ -709,6 +701,21 @@ import Layout from "../components/layout.astro";
           </table>
         </section>
         <section x-data="{ open: false }">
+          <!-- Sides -->
+          <h3 class="buttont" x-on:click="open = ! open">Sides</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Toasted Tea Cake</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
           <!-- Sauces -->
           <h3 class="buttont" x-on:click="open = ! open">Sauces</h3>
           <table class="doubled step" x-show="open" x-transition>
@@ -783,80 +790,74 @@ import Layout from "../components/layout.astro";
       <h2 class="button" x-on:click="open = ! open">Drinks</h2>
 
       <div class="stept" x-show="open" x-transition>
-        <h4>Our selection of syrups to be added to a drink of your choice</h4>
+        <h4>
+          Our selection of syrups to be added to a drink of your choice for 65p
+        </h4>
         <section x-data="{ open: false }">
-          <h3 class="buttonc" x-on:click="open = ! open">Drinks</h3>
+          <h3 class="buttonc" x-on:click="open = ! open">Hot Drinks</h3>
           <table class="doubled stept" x-show="open" x-transition>
             <tbody>
               <tr>
                 <th scope="row">
                   <strong>Ground Coffee / Americano</strong>
                 </th>
-                <td class="price">£2.20</td>
-                <th scope="row">
-                  <strong>Tea</strong>
-                </th>
-                <td class="price">£1.50</td>
-              </tr>
-              <tr>
+                <td class="price">£2.40</td>
                 <th scope="row">
                   <strong>Cappuccino</strong>
-                </th>
-                <td class="price">£2.40</td>
-                <th scope="row">
-                  <strong>Specialty Teas</strong>
-                </th>
-                <td class="price">£1.80</td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <strong>Latte</strong>
-                </th>
-                <td class="price">£2.40</td>
-                <th scope="row">
-                  <strong>Flat White</strong>
                 </th>
                 <td class="price">£2.60</td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Espresso</strong>
+                  <strong>Latte</strong>
                 </th>
-                <td class="price">£1.80</td>
+                <td class="price">£2.60</td>
                 <th scope="row">
-                  <strong>Fun Shakes</strong>
+                  <strong>Flat White</strong>
                 </th>
-                <td class="price">£3.50</td>
+                <td class="price">£2.80</td>
               </tr>
               <tr>
+                <th scope="row">
+                  <strong>Espresso</strong>
+                </th>
+                <td class="price">£1.95</td>
                 <th scope="row">
                   <strong>Hot Chocolate</strong>
                 </th>
                 <td class="price">£2.50</td>
-                <th scope="row">
-                  <strong>Frappes</strong>
-                </th>
-                <td class="price">£3.25</td>
               </tr>
               <tr>
                 <th scope="row">
                   <strong>Mocha</strong>
                 </th>
-                <td class="price">£2.90</td>
-                <th scope="row">
-                  <strong>Thick shakes</strong>
-                </th>
-                <td class="price">£3.50</td>
+                <td class="price">£3.10</td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Cream or Marshmallows</strong>
+                  <strong>Cream</strong>
                 </th>
-                <td class="price">From 20p</td>
+                <td class="price">30p</td>
                 <th scope="row">
-                  <strong>Smoothies</strong>
+                  <strong>Marshmallows</strong>
                 </th>
-                <td class="price">£3.25</td>
+                <td class="price">20p</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Extra Shot</strong>
+                </th>
+                <td class="price">60p</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tea / Decaf</strong>
+                </th>
+                <td class="price">£1.50</td>
+                <th scope="row">
+                  <strong>Specialty Teas</strong>
+                </th>
+                <td class="price">£2.00</td>
               </tr>
             </tbody>
           </table>
@@ -928,6 +929,36 @@ import Layout from "../components/layout.astro";
                 <th scope="row">
                   <strong>Coffee</strong>
                 </th>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <h3 class="buttonc" x-on:click="open = ! open">Cold Drinks</h3>
+          <table class="doubled stept" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Fun Shakes</strong>
+                </th>
+                <td class="price">£3.50</td>
+                <th scope="row">
+                  <strong>Frappes <span class="d v">V</span></strong>
+                </th>
+                <td class="price">£3.25</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Thick shakes</strong>
+                </th>
+                <td class="price">£3.50</td>
+                <th scope="row">
+                  <strong
+                    >Fresh Smoothies <span class="d v">V</span>
+                    <span class="d vg">Vg</span>
+                  </strong>
+                </th>
+                <td class="price">£3.25</td>
               </tr>
             </tbody>
           </table>
