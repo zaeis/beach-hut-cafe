@@ -1,0 +1,208 @@
+---
+import Layout from "../components/layout.astro";
+---
+
+<style>
+  .steps {
+    background: var(--light);
+    border-bottom: 1px solid var(--lightBorder);
+    border-top: 1px solid var(--lightBorder);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: min(90vw, 250px);
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 2rem 5vw;
+    width: 100vw;
+  }
+
+  @media (min-width: 550px) {
+    .steps {
+      grid-template-columns: repeat(2, min(calc(50% - 1rem), 250px));
+    }
+  }
+
+  @media (min-width: 1050px) {
+    .steps {
+      grid-template-columns: repeat(4, min(calc(25% - 1.5rem), 250px));
+    }
+  }
+
+  .step {
+    background: var(--white);
+    border: 1px solid var(--lightBorder);
+    border-radius: 4px;
+    /* display: flex; */
+    flex-direction: column;
+    font-size: 0.75rem;
+    padding: 1rem 1.5rem 1.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .stept {
+    background: var(--white);
+    border: 1px solid var(--lightBorder);
+    border-radius: 4px;
+    /* display: flex; */
+    flex-direction: column;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem 1rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .stepHeading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .button {
+    background: var(--primary);
+    border-radius: 4px;
+    color: var(--button);
+    /* display: inline-block; */
+    font-weight: 600;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    /* width: max-content; */
+  }
+
+  .buttont {
+    background: var(--lightBorder);
+    border-radius: 4px;
+    color: var(--button);
+    /* display: inline-block; */
+    font-weight: 600;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0.5rem;
+    text-decoration: none;
+    /* width: max-content; */
+  }
+
+  .buttonc {
+    background: #caf0f8;
+    border-radius: 4px;
+    color: var(--first-color);
+    /* display: inline-block; */
+    font-weight: 600;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0.5rem;
+    text-decoration: none;
+    /* width: max-content; */
+  }
+
+  :root {
+    --base-font-size: 12px;
+    --fluid-typography-ratio: 0.9;
+    --rem: calc(var(--base-font-size) + var(--fluid-typography-ratio) * 0.5vw);
+  }
+
+  h1,
+  h2 {
+    color: #924a04;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: calc(1.5 * var(--rem));
+  }
+
+  h2 {
+    font-size: calc(1.2 * var(--rem));
+  }
+
+  h3 {
+    font-size: var(--rem);
+    margin: var(--rem) 0 0 0;
+  }
+
+  p {
+    margin: calc(2 * var(--rem)) 0;
+    text-align: center;
+  }
+
+  section {
+    /* border-top: calc(0.0625 * var(--rem)) dashed #aaa;
+    border-bottom: calc(0.0625 * var(--rem)) dashed #aaa; */
+  }
+
+  section table {
+    padding-left: var(--rem);
+  }
+
+  .d {
+    border-radius: 100%;
+    display: inline-block;
+    height: var(--rem);
+    line-height: 0.3rem;
+    padding: calc(0.25 * var(--rem));
+    text-align: center;
+    width: calc(1.5 * var(--rem));
+    font-size: smaller;
+    font-weight: bold;
+  }
+
+  .d.v {
+    background: #cbef43;
+    color: #004700;
+  }
+
+  .d.vg {
+    background: #8de969;
+    color: #14170d;
+  }
+
+  .d.seafood {
+    background: #afe0ce;
+    color: #14170d;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+    width: 100%;
+  }
+
+  th {
+    width: 80%;
+  }
+
+  table.doubled th {
+    width: auto;
+  }
+
+  th,
+  td {
+    font-weight: normal;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  td.diet {
+    padding-left: 0.5rem;
+    text-align: right;
+  }
+
+  .types {
+    font-size: calc(0.8 * var(--rem));
+  }
+  .types span {
+    margin-left: 0.5rem;
+  }
+</style>
+
+<Layout
+  title="Food & Drinks Menu"
+  description="(Eat In or Take Away)"
+  home
+  x-cloak
+>
+  <h2>(Prices subject to change. Please check the boards)</h2>
+  <main>
+    <h1>Page down for maintenance</h1>
+  </main>
+</Layout>

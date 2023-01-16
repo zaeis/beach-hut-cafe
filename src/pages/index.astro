@@ -203,6 +203,741 @@ import Layout from "../components/layout.astro";
 >
   <h2>(Prices subject to change. Please check the boards)</h2>
   <main>
-    <h1>Page down for maintenance</h1>
+    <section x-data="{ open: false }">
+      <h2 class="button" x-on:click="open = ! open">Food</h2>
+      <section x-show="open" x-transition>
+        <section x-data="{ open: false }">
+          <!-- Mains -->
+          <h3 class="buttont" x-on:click="open = ! open">Mains</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>1/4lb Burger</strong><br />
+                </th>
+                <td class="price">£3.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>1/2lb Burger</strong><br />
+                </th>
+                <td class="price">£5.00</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Veggie / Vegan Burger</strong><br />
+                </th>
+                <td class="price">£4.50</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  <strong>Add Extras to any Burger</strong><br />
+                  + Onions 20p, + Cheese 30p/60p, + Bacon £1.00, + Chilli £2.00<br
+                  />
+                  + Mushrooms £1.10, + Egg £1.10, + Hashbrown £1.10
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Scampi (Wholetail)</strong>
+                </th>
+                <td class="price">£7.25</td>
+                <td class="diet"><span class="d seafood">S</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Fish Goujon</strong>
+                </th>
+                <td class="price">£7.25</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham, Egg and Chips</strong>
+                </th>
+                <td class="price">£5.95</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Southern Fried Chicken Wrap</strong>
+                </th>
+                <td class="price">£6.00</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sausage and Chips</strong>
+                </th>
+                <td class="price">£4.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chicken Chunks & Chips</strong>
+                </th>
+                <td class="price">£4.95</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Beer Battered Onion Rings</strong>
+                </th>
+                <td class="price">£3.50</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chips</strong>
+                </th>
+                <td class="price"
+                  >Sml £2.00<br />
+                  Lrg £3.00</td
+                >
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- Loaded chip -->
+          <h3 class="buttont" x-on:click="open = ! open">Loaded Chips</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese and Bacon</strong>
+                </th>
+                <td class="price">£4.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese and Beans</strong>
+                </th>
+                <td class="price">£4.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chilli & Cheese</strong>
+                </th>
+                <td class="price">£6.00</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chorizo & Halloumi</strong>
+                </th>
+                <td class="price">£5.90</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese</strong>
+                </th>
+                <td class="price">£3.40</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Beans</strong>
+                </th>
+                <td class="price">£3.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chilli</strong>
+                </th>
+                <td class="price">£4.90</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sweet Potato Fries</strong>
+                </th>
+                <td class="price">£3.00</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chip Butty</strong>
+                </th>
+                <td class="price">£2.75</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Double Egg and Chips</strong>
+                </th>
+                <td class="price">£4.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Halloumi Roll or Bites</strong>
+                </th>
+                <td class="price">£3.60</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- Childrens Meals -->
+          <h3 class="buttont" x-on:click="open = ! open">Kids Meals</h3>
+          <div class="stept" x-show="open" x-transition>
+            <h4>
+              All meals available in a box for £3.80 or in a bucket with spade
+              for £4.80. Eat in or takeaway.
+            </h4>
+            <section x-data="{ open: false }">
+              <h3 class="buttonc" x-on:click="open = ! open">Cold Meals</h3>
+              <table class="stept" x-show="open" x-transition>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <strong>Cheese Roll/Jam roll</strong><br />
+                      +Packet of pom bear potato snacks<br />
+                      +Carton of juice or Bottled water
+                    </th>
+                    <td class="price"></td>
+                    <td class="diet"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section x-data="{ open: false }">
+              <h3 class="buttonc" x-on:click="open = ! open">Hot Meals</h3>
+              <table class="stept" x-show="open" x-transition>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <strong
+                        >Chicken Nuggets/2oz Burger/Sausage/Fish Cake</strong
+                      ><br />
+                      +Chips<br />
+                      +Carton of juice or Bottled water
+                    </th>
+                    <td class="price"></td>
+                    <td class="diet"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- All day break -->
+          <h3 class="buttont" x-on:click="open = ! open">All Day Breakfast</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Set Breakfast</strong><br />
+                  Saus, Bacon, Egg, Mush, Tom, Beans, Fr&nbsp;Bread.
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Large Breakfast</strong><br />
+                  Extra Sausage, Bacon and Hash Brown
+                </th>
+                <td class="price">£7.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Buld a Breakfast</strong><br />
+                  Minimum 4 Items. £1.10 per item.
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sausage, Bacon & Egg Roll</strong>
+                </th>
+                <td class="price">£4.90</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sausage & Bacon Roll</strong>
+                </th>
+                <td class="price">£3.80</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Bacon & Egg Roll</strong>
+                </th>
+                <td class="price">£3.80</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sausage & Egg Roll</strong>
+                </th>
+                <td class="price">£3.70</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sausage in a Roll</strong>
+                </th>
+                <td class="price">£2.60</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Bacon Roll</strong>
+                </th>
+                <td class="price">£2.70</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Egg Roll</strong>
+                </th>
+                <td class="price">£2.60</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Add extra items to your roll from the list.
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Breakfast Wrap</strong><br />
+                  Choose 4 Items
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Breakfast Items</strong><br />
+                  Bacon, Sausage, Egg, Hashbrown, Beans, Potato Slices, Tomato, Mushrooms,
+                  Black Pudding, Fried Bread, Toast
+                </th>
+                <td class="price"><br />£1.10 each</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row"> Cheese Slice</th>
+                <td class="price">30p each</td>
+                <td class="diet"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- Sides -->
+          <h3 class="buttont" x-on:click="open = ! open">Sides</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Toasted Tea Cake</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- Jacket potato -->
+          <h3 class="buttont" x-on:click="open = ! open">Jacket Potatoes</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Plain</strong>
+                </th>
+                <td class="price">£3.70</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Beans</strong>
+                </th>
+                <td class="price">£4.70</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese</strong>
+                </th>
+                <td class="price">£4.70</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Beans and Cheese</strong>
+                </th>
+                <td class="price">£5.40</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo</strong>
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo & Cheese</strong>
+                </th>
+                <td class="price">£6.70</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Prawn Mayo</strong>
+                </th>
+                <td class="price">£7.00</td>
+                <td class="diet"><span class="d seafood">S</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chilli</strong><br />
+                  Add cheese £1.20
+                </th>
+                <td class="price">£6.00</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- Rolls -->
+          <h3 class="buttont" x-on:click="open = ! open">Rolls</h3>
+          <table class="step" x-show="open" x-transition>
+            <tbody>
+              <th>Add onions to any roll for 20p</th>
+              <tr>
+                <th scope="row">
+                  <strong>Strawberry & Jam</strong>
+                </th>
+                <td class="price">£2.10</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese</strong>
+                </th>
+                <td class="price">£2.20</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cheese & Tomato</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo</strong>
+                </th>
+                <td class="price">£2.65</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo & Tomato</strong>
+                </th>
+                <td class="price">£2.95</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Tuna Mayo & Cheese</strong>
+                </th>
+                <td class="price">£3.35</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham & Tomato</strong>
+                </th>
+                <td class="price">£2.80</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ham & Cheese</strong>
+                </th>
+                <td class="price">£3.20</td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Crab Sandwich (When available)</strong>
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"><span class="d seafood">S</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Prawn Mayo Sandwich (When available)</strong>
+                </th>
+                <td class="price">£5.50</td>
+                <td class="diet"><span class="d seafood">S</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <!-- Sauces -->
+          <h3 class="buttont" x-on:click="open = ! open">Sauces</h3>
+          <table class="doubled step" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Mayonaise</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+                <th scope="row">
+                  <strong>Garlic Mayonaise</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>BBQ Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+                <th scope="row">
+                  <strong>Vegan Mayonaise</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sweet Chilli Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+                <th scope="row">
+                  <strong>Buffalo Hot Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Burger Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+                <th scope="row">
+                  <strong>Mustard</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Ketchup</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+                <th scope="row">
+                  <strong>Brown Sauce</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
+
+    <section x-data="{ open: false }">
+      <h2 class="button" x-on:click="open = ! open">Drinks</h2>
+
+      <div class="stept" x-show="open" x-transition>
+        <h4>Our selection of syrups to be added to a drink of your choice</h4>
+        <section x-data="{ open: false }">
+          <h3 class="buttonc" x-on:click="open = ! open">Drinks</h3>
+          <table class="doubled stept" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Ground Coffee / Americano</strong>
+                </th>
+                <td class="price">£2.20</td>
+                <th scope="row">
+                  <strong>Tea</strong>
+                </th>
+                <td class="price">£1.50</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cappuccino</strong>
+                </th>
+                <td class="price">£2.40</td>
+                <th scope="row">
+                  <strong>Specialty Teas</strong>
+                </th>
+                <td class="price">£1.80</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Latte</strong>
+                </th>
+                <td class="price">£2.40</td>
+                <th scope="row">
+                  <strong>Flat White</strong>
+                </th>
+                <td class="price">£2.60</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Espresso</strong>
+                </th>
+                <td class="price">£1.80</td>
+                <th scope="row">
+                  <strong>Fun Shakes</strong>
+                </th>
+                <td class="price">£3.50</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Hot Chocolate</strong>
+                </th>
+                <td class="price">£2.50</td>
+                <th scope="row">
+                  <strong>Frappes</strong>
+                </th>
+                <td class="price">£3.25</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Mocha</strong>
+                </th>
+                <td class="price">£2.90</td>
+                <th scope="row">
+                  <strong>Thick shakes</strong>
+                </th>
+                <td class="price">£3.50</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Cream or Marshmallows</strong>
+                </th>
+                <td class="price">From 20p</td>
+                <th scope="row">
+                  <strong>Smoothies</strong>
+                </th>
+                <td class="price">£3.25</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section x-data="{ open: false }">
+          <h3 class="buttonc" x-on:click="open = ! open">Syrups</h3>
+          <table class="doubled stept" x-show="open" x-transition>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <strong>Chocolate</strong>
+                </th>
+                <th scope="row">
+                  <strong>Strawberry</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Banana</strong>
+                </th>
+                <th scope="row">
+                  <strong>Salted Caramel</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Vanilla</strong>
+                </th>
+                <th scope="row">
+                  <strong>Caramel</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Hazelnut</strong>
+                </th>
+                <th scope="row">
+                  <strong>Gingerbread</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Amaretto</strong>
+                </th>
+                <th scope="row">
+                  <strong>Cinnamon</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Mint</strong>
+                </th>
+                <th scope="row">
+                  <strong>Coconut</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Honeycomb</strong>
+                </th>
+                <th scope="row">
+                  <strong>Spiced Chai</strong>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Spiced Pumpkin</strong>
+                </th>
+                <th scope="row">
+                  <strong>Coffee</strong>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <section class="types">
+        <span class="d v">V</span> Vegetarian
+        <span class="d vg">Vg</span> Vegan
+        <span class="d seafood">S</span> Seafood
+      </section>
+    </section>
   </main>
 </Layout>
