@@ -3,17 +3,17 @@
   const stamp = "images/stamp.png";
   const transparent = "images/transparent.png";
   function toggle(p) {
-    console.log("test 1 ", elm[p].src);
+    // console.log("test 1 ", elm[p].src);
     if (localStorage.getItem(p) != transparent) {
       localStorage.setItem(p, transparent);
     } else {
       localStorage.setItem(p, stamp);
     }
     elm[p].src = localStorage.getItem(p);
-    console.log("test 2 ", elm[p].src);
+    // console.log("test 2 ", elm[p].src);
   }
   function setup(p) {
-    console.log(localStorage.getItem(p));
+    // console.log(localStorage.getItem(p));
     if (!localStorage.getItem(p)) {
       localStorage.setItem(p, transparent);
     }
@@ -27,15 +27,51 @@
     setup("c2");
     setup("c3");
     setup("c4");
+    setup("c5");
+    setup("c6");
+    setup("c7");
+    setup("c8");
   }
 </script>
 <style>
+  body {
+    background: url(images/easter.png) no-repeat center;
+    background-color: #feecaa;
+    background-size: contain;
+  }
   img {
-    border: 1px solid black;
+    width: 8vw;
+  }
+  table {
+    width: 100vw;
+    padding-left: 70.5vw;
+    padding-top: 28%;
+    table-layout: fixed;
+    overflow: hidden;
+  }
+  td {
+    display: inline-block;
+    margin-right: 3vw;
+    margin-bottom: 1vw;
   }
 </style>
-
-<img id="c1" width="300" />
-<img id="c2" width="300" />
-<img id="c3" width="300" />
-<img id="c4" width="300" />
+<table>
+  <tbody>
+    <tr>
+      <td> <img id="c1" /></td>
+      <td> <img id="c2" /></td>
+    </tr>
+    <tr>
+      <td><img id="c3" /></td>
+      <td> <img id="c4" /></td>
+    </tr>
+    <tr>
+      <td> <img id="c5" /></td>
+      <td> <img id="c6" /></td>
+    </tr>
+    <tr>
+      <td> <img id="c7" /></td>
+      <td> <img id="c8" /></td>
+    </tr>
+  </tbody>
+</table>
