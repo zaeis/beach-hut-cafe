@@ -15,9 +15,14 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/react": "^3.1.0",
     "@types/alpinejs": "^3.7.0",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.22",
     "alpinejs": "^3.10.3",
-    "netlify-cli": "^12.0.6"
+    "netlify-cli": "^12.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "optionalDependencies": {
     "fsevents": "*"
