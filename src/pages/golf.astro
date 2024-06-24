@@ -74,16 +74,31 @@
           <th>PLAYER2</th>
           <th>PLAYER3</th>
           <th>PLAYER4</th>
+          <th>PLAYER5</th>
+          <th>PLAYER6</th>
         </tr>
       </thead>
       <tbody>
         <!-- Loop to create rows for each hole -->
       </tbody>
+      <tfoot>
+        <tr id="totals-row">
+          <td>Total</td>
+          <td></td>
+          <!-- PAR column, filled dynamically in JavaScript -->
+          <td id="player1-total">0</td>
+          <td id="player2-total">0</td>
+          <td id="player3-total">0</td>
+          <td id="player4-total">0</td>
+          <td id="player5-total">0</td>
+          <td id="player6-total">0</td>
+        </tr>
+      </tfoot>
     </table>
 
     <script>
       const rows = 12; // 12 rows for 12 holes
-      const cols = 6; // 6 columns (HOLE, PAR, PLAYER1, PLAYER2, PLAYER3, PLAYER4)
+      const cols = 8; // 8 columns (HOLE, PAR, PLAYER1, PLAYER2, PLAYER3, PLAYER4, PLAYER5, PLAYER6)
 
       const table = document.getElementById("textarea-table");
 
@@ -98,6 +113,7 @@
 
       // Insert initial data into the table
       for (let i = 0; i < rows; i++) {
+        // Changed back to i < rows to exclude the "Total" row
         const tr = document.createElement("tr");
 
         // HOLE column
@@ -107,20 +123,15 @@
 
         // PAR column
         const parCell = document.createElement("td");
-        if (i < 12) {
-          const parValues = [3, 3, 2, 3, 3, 2, 3, 4, 2, 3, 4, 4];
-          parCell.textContent = parValues[i];
-        } else {
-          // Total row
-          parCell.textContent = "Total";
-        }
+        const parValues = [3, 3, 2, 3, 3, 2, 3, 4, 2, 3, 4, 4];
+        parCell.textContent = parValues[i];
         tr.appendChild(parCell);
 
-        // PLAYER1 to PLAYER4 columns (textareas)
+        // PLAYER1 to PLAYER6 columns (textareas)
         for (let j = 0; j < cols - 2; j++) {
           const td = document.createElement("td");
           const textarea = document.createElement("textarea");
-          textarea.setAttribute("cols", "10");
+          textarea.setAttribute("cols", "5");
           textarea.classList.add("score-input"); // Add class to control score input width
           const key = `notes-${i}-${j + 2}`; // Start from index 2 for PLAYER1 column
 
@@ -135,7 +146,7 @@
           td.appendChild(textarea);
           tr.appendChild(td);
 
-          // Add input event listener to validate input
+          // Add input event listener to validate input and update totals
           textarea.addEventListener("input", (event) => {
             const value = event.target.value;
             if (!isValidInput(value)) {
@@ -144,12 +155,65 @@
             } else {
               // Update localStorage with valid input
               localStorage.setItem(key, value);
+              updateTotals(); // Update totals when input changes
             }
           });
         }
 
         table.querySelector("tbody").appendChild(tr);
       }
+
+      // Function to update totals for each player
+      function updateTotals() {
+        let player1Total = 0,
+          player2Total = 0,
+          player3Total = 0,
+          player4Total = 0,
+          player5Total = 0,
+          player6Total = 0;
+
+        for (let i = 0; i < rows; i++) {
+          for (let j = 0; j < cols - 2; j++) {
+            const key = `notes-${i}-${j + 2}`;
+            const textarea = table.querySelector(`textarea[data-key="${key}"]`);
+            const value = parseInt(textarea.value, 10) || 0;
+
+            switch (j + 2) {
+              case 2: // PLAYER1 column
+                player1Total += value;
+                break;
+              case 3: // PLAYER2 column
+                player2Total += value;
+                break;
+              case 4: // PLAYER3 column
+                player3Total += value;
+                break;
+              case 5: // PLAYER4 column
+                player4Total += value;
+                break;
+              case 6: // PLAYER5 column
+                player5Total += value;
+                break;
+              case 7: // PLAYER6 column
+                player6Total += value;
+                break;
+              default:
+                break;
+            }
+          }
+        }
+
+        // Update totals in the total row
+        document.getElementById("player1-total").textContent = player1Total;
+        document.getElementById("player2-total").textContent = player2Total;
+        document.getElementById("player3-total").textContent = player3Total;
+        document.getElementById("player4-total").textContent = player4Total;
+        document.getElementById("player5-total").textContent = player5Total;
+        document.getElementById("player6-total").textContent = player6Total;
+      }
+
+      // Call updateTotals initially to calculate totals based on initial input
+      updateTotals();
     </script>
   </body>
 </html>
