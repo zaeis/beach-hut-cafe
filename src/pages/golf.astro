@@ -44,7 +44,6 @@
       th {
         width: 10px;
       }
-      ,
       td {
         border: 1px solid #00630c;
         padding: 6px;
@@ -60,9 +59,7 @@
         font-size: 14px;
         border: none;
         background-color: transparent;
-        resize: none; /* Prevent resizing */
       }
-
       @media (max-width: 600px) {
         th,
         td {
@@ -159,6 +156,7 @@
           textarea.setAttribute("cols", "3");
           textarea.classList.add("score-input"); // Add class to control score input width
           textarea.setAttribute("inputmode", "numeric"); // Ensure numeric keypad on mobile
+          textarea.style.resize = "none";
           const key = `notes-${i}-${j + 2}`; // Start from index 2 for PLAYER1 column
 
           // Check if there's existing data in localStorage
