@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Scratchpad</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        background: linear-gradient(
+          135deg,
+          #c8b798 25%,
+          #e0d7c8 25%,
+          #e0d7c8 50%,
+          #c8b798 50%,
+          #c8b798 75%,
+          #e0d7c8 75%
+        );
+        background-size: 9px 9px; /* Adjust size as needed */
+        text-align: center;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        overflow-x: auto; /* Enable horizontal scrolling on small screens */
+        background: white;
+        border: 1px solid black;
+      }
+
+      th {
+        width: fit-content;
+      }
+      ,
+      td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: center;
+        white-space: nowrap; /* Prevent text wrapping */
+      }
+
+      .score-input {
+        width: 40px;
+        height: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 14px;
+        border: none;
+        background-color: transparent;
+        resize: none;
+      }
+
+      @media (max-width: 600px) {
+        th,
+        td {
+          padding: 6px; /* Reduce padding for smaller screens */
+          font-size: 12px; /* Adjust font size for smaller screens */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="textarea-table">
+      <thead>
+        <tr>
+          <th>HOLE</th>
+          <th>PAR</th>
+          <th>PLAYER1</th>
+          <th>PLAYER2</th>
+          <th>PLAYER3</th>
+          <th>PLAYER4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop to create rows for each hole -->
+      </tbody>
+    </table>
+
+    <script>
+      const rows = 12; // 12 rows for 12 holes
+      const cols = 6; // 6 columns (HOLE, PAR, PLAYER1, PLAYER2, PLAYER3, PLAYER4)
+
+      const table = document.getElementById("textarea-table");
+
+      // Function to validate input as numbers from 0 to 99
+      function isValidInput(value) {
+        return (
+          /^\d{1,2}$/.test(value) &&
+          parseInt(value, 10) >= 0 &&
+          parseInt(value, 10) <= 99
+        );
+      }
+
+      // Insert initial data into the table
+      for (let i = 0; i < rows; i++) {
+        const tr = document.createElement("tr");
+
+        // HOLE column
+        const holeCell = document.createElement("td");
+        holeCell.textContent = i + 1; // Holes are numbered from 1 to 12
+        tr.appendChild(holeCell);
+
+        // PAR column
+        const parCell = document.createElement("td");
+        if (i < 12) {
+          const parValues = [3, 3, 2, 3, 3, 2, 3, 4, 2, 3, 4, 4];
+          parCell.textContent = parValues[i];
+        } else {
+          // Total row
+          parCell.textContent = "Total";
+        }
+        tr.appendChild(parCell);
+
+        // PLAYER1 to PLAYER4 columns (textareas)
+        for (let j = 0; j < cols - 2; j++) {
+          const td = document.createElement("td");
+          const textarea = document.createElement("textarea");
+          textarea.setAttribute("cols", "10");
+          textarea.classList.add("score-input"); // Add class to control score input width
+          const key = `notes-${i}-${j + 2}`; // Start from index 2 for PLAYER1 column
+
+          // Check if there's existing data in localStorage
+          const storedValue = localStorage.getItem(key);
+          if (storedValue !== null) {
+            textarea.value = storedValue;
+          }
+
+          textarea.setAttribute("data-key", key);
+          textarea.setAttribute("placeholder", "Score");
+          td.appendChild(textarea);
+          tr.appendChild(td);
+
+          // Add input event listener to validate input
+          textarea.addEventListener("input", (event) => {
+            const value = event.target.value;
+            if (!isValidInput(value)) {
+              // Clear textarea if input is invalid
+              event.target.value = "";
+            } else {
+              // Update localStorage with valid input
+              localStorage.setItem(key, value);
+            }
+          });
+        }
+
+        table.querySelector("tbody").appendChild(tr);
+      }
+    </script>
+  </body>
+</html>
