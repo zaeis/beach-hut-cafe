@@ -130,6 +130,7 @@
           const textarea = document.createElement("textarea");
           textarea.setAttribute("cols", "3");
           textarea.classList.add("score-input"); // Add class to control score input width
+          textarea.setAttribute("inputmode", "numeric"); // Ensure numeric keypad on mobile
           const key = `notes-${i}-${j + 2}`; // Start from index 2 for PLAYER1 column
 
           // Check if there's existing data in localStorage
