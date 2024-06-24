@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Scratchpad</title>
     <style>
@@ -14,22 +13,12 @@
         height: 100%;
         font-family: Arial, sans-serif;
         margin: 0 auto;
-        /* background: linear-gradient(
-          135deg,
-          #c8b798 25%,
-          #e0d7c8 25%,
-          #e0d7c8 50%,
-          #c8b798 50%,
-          #c8b798 75%,
-          #e0d7c8 75%
-        );
-        background-size: 9px 9px; Adjust size as needed */
         text-align: center;
       }
 
       table {
         width: 100%;
-        height: 100%;
+        height: 95%;
         border-collapse: collapse;
         margin-bottom: 20px;
         overflow-x: auto; /* Enable horizontal scrolling on small screens */
@@ -100,6 +89,9 @@
         </tr>
       </tfoot>
     </table>
+
+    <!-- Reset button -->
+    <button id="reset-button">Reset</button>
 
     <script>
       const rows = 12; // 12 rows for 12 holes
@@ -219,6 +211,28 @@
 
       // Call updateTotals initially to calculate totals based on initial input
       updateTotals();
+
+      // Reset button click handler
+      const resetButton = document.getElementById("reset-button");
+      resetButton.addEventListener("click", () => {
+        if (
+          confirm(
+            "Are you sure you want to reset? This will clear all saved data.",
+          )
+        ) {
+          // Clear all localStorage data
+          localStorage.clear();
+
+          // Reset all textareas to empty
+          const textareas = document.querySelectorAll("textarea.score-input");
+          textareas.forEach((textarea) => {
+            textarea.value = "";
+          });
+
+          // Update totals after clearing
+          updateTotals();
+        }
+      });
     </script>
   </body>
 </html>
