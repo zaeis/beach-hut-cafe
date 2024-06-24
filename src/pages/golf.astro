@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Scratchpad</title>
     <style>
+      html {
+        height: 100%;
+      }
       body {
+        height: 100%;
         font-family: Arial, sans-serif;
-        padding: 10px;
-        background: linear-gradient(
+        margin: 0 auto;
+        /* background: linear-gradient(
           135deg,
           #c8b798 25%,
           #e0d7c8 25%,
@@ -19,12 +23,13 @@
           #c8b798 75%,
           #e0d7c8 75%
         );
-        background-size: 9px 9px; /* Adjust size as needed */
+        background-size: 9px 9px; Adjust size as needed */
         text-align: center;
       }
 
       table {
         width: 100%;
+        height: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
         overflow-x: auto; /* Enable horizontal scrolling on small screens */
@@ -33,12 +38,12 @@
       }
 
       th {
-        width: fit-content;
+        width: 10px;
       }
       ,
       td {
         border: 1px solid #000;
-        padding: 8px;
+        padding: 6px;
         text-align: center;
         white-space: nowrap; /* Prevent text wrapping */
       }
@@ -58,7 +63,7 @@
         th,
         td {
           padding: 6px; /* Reduce padding for smaller screens */
-          font-size: 12px; /* Adjust font size for smaller screens */
+          font-size: 10px; /* Adjust font size for smaller screens */
         }
       }
     </style>
@@ -70,12 +75,12 @@
         <tr>
           <th>HOLE</th>
           <th>PAR</th>
-          <th>PLAYER1</th>
-          <th>PLAYER2</th>
-          <th>PLAYER3</th>
-          <th>PLAYER4</th>
-          <th>PLAYER5</th>
-          <th>PLAYER6</th>
+          <th>PLAYER<br />1</th>
+          <th>PLAYER<br />2</th>
+          <th>PLAYER<br />3</th>
+          <th>PLAYER<br />4</th>
+          <th>PLAYER<br />5</th>
+          <th>PLAYER<br />6</th>
         </tr>
       </thead>
       <tbody>
@@ -131,7 +136,7 @@
         for (let j = 0; j < cols - 2; j++) {
           const td = document.createElement("td");
           const textarea = document.createElement("textarea");
-          textarea.setAttribute("cols", "5");
+          textarea.setAttribute("cols", "3");
           textarea.classList.add("score-input"); // Add class to control score input width
           const key = `notes-${i}-${j + 2}`; // Start from index 2 for PLAYER1 column
 
@@ -142,7 +147,7 @@
           }
 
           textarea.setAttribute("data-key", key);
-          textarea.setAttribute("placeholder", "Score");
+          textarea.setAttribute("placeholder", "0");
           td.appendChild(textarea);
           tr.appendChild(td);
 
