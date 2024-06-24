@@ -21,7 +21,7 @@
         height: 70px;
       }
       #reset-button {
-        margin-bottom: 70px;
+        margin-bottom: 30px;
         background-color: #5f3211;
         border: none;
         color: #f5e875;
@@ -37,7 +37,6 @@
         width: 100%;
         height: 100%;
         border-collapse: collapse;
-        margin-bottom: 20px;
         overflow-x: auto; /* Enable horizontal scrolling on small screens */
         border: 1px solid #00630c;
       }
@@ -71,6 +70,11 @@
           font-size: 10px; /* Adjust font size for smaller screens */
         }
       }
+      .grass {
+        background: linear-gradient(120deg, #8fbf42, #1f7f2c);
+        color: white;
+        font-weight: bold;
+      }
     </style>
   </head>
 
@@ -93,7 +97,7 @@
           <th>PLAYER<br />6</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="grass">
         <!-- Loop to create rows for each hole -->
       </tbody>
       <tfoot>
