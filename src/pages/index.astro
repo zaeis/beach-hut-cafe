@@ -193,6 +193,10 @@ import Layout from "../components/layout.astro";
   .types span {
     margin-left: 0.5rem;
   }
+  p.notice {
+    font-size: calc(0.9 * var(--rem));
+    margin: 0;
+  }
 </style>
 
 <Layout
@@ -202,6 +206,10 @@ import Layout from "../components/layout.astro";
   x-cloak
 >
   <h2>(Prices subject to change. Please check the boards)</h2>
+  <p class="notice">
+    Please do not eat takeway food or drink at any table.<br />We will ask you
+    to wait outside while we prepare your order.<br />Thank you!
+  </p>
   <main>
     <section x-data="{ open: false }">
       <h2 class="button" x-on:click="open = ! open">Food</h2>
@@ -328,7 +336,7 @@ import Layout from "../components/layout.astro";
                 <td class="price">£4.95</td>
                 <td class="diet"><span class="d v">V</span></td>
               </tr>
-              <tr>
+              <!--<tr>
                 <th scope="row">
                   <strong>Kids Meals</strong>
                 </th>
@@ -341,7 +349,7 @@ import Layout from "../components/layout.astro";
                 </th>
                 <td class="price"></td>
                 <td class="diet"></td>
-              </tr>
+              </tr>-->
             </tbody>
           </table>
           <section x-data="{ open: false }">
@@ -401,7 +409,7 @@ import Layout from "../components/layout.astro";
               </tbody>
             </table>
           </section>
-          <!-- Childrens Meals
+          <!-- Childrens Meals -->
           <section x-data="{ open: false }">
             <h3 class="buttont" x-on:click="open = ! open">Kids Meals</h3>
             <div class="stept" x-show="open" x-transition>
@@ -444,7 +452,7 @@ import Layout from "../components/layout.astro";
                 </table>
               </section>
             </div>
-          </section> -->
+          </section>
           <section x-data="{ open: false }">
             <!-- All day break -->
             <h3 class="buttont" x-on:click="open = ! open">
@@ -622,9 +630,8 @@ import Layout from "../components/layout.astro";
                 </tr>
               </tbody>
             </table>
-          </section><!-- Rolls 
+          </section><!-- Rolls -->
           <section x-data="{ open: false }">
-            
             <h3 class="buttont" x-on:click="open = ! open">Rolls</h3>
             <table class="step" x-show="open" x-transition>
               <tbody>
@@ -708,7 +715,7 @@ import Layout from "../components/layout.astro";
                 </tr>
               </tbody>
             </table>
-          </section>-->
+          </section>
           <section x-data="{ open: false }">
             <!-- Sides -->
             <h3 class="buttont" x-on:click="open = ! open">Cakes & Bakes</h3>
