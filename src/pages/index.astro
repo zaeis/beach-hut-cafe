@@ -335,6 +335,13 @@ import Layout from "../components/layout.astro";
                 <td class="price">£4.50</td>
                 <td class="diet"></td>
               </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Freshly Filled Rolls available</strong>
+                </th>
+                <td class="price"></td>
+                <td class="diet"></td>
+              </tr>
             </tbody>
           </table>
           <section x-data="{ open: false }">
@@ -548,75 +555,76 @@ import Layout from "../components/layout.astro";
             <h3 class="buttont" x-on:click="open = ! open">Jacket Potatoes</h3>
             <table class="step" x-show="open" x-transition>
               <tbody>
+                <th>Served with a garnish</th>
                 <tr>
                   <th scope="row">
                     <strong>Plain</strong>
                   </th>
-                  <td class="price">£4.50</td>
+                  <td class="price">£4.95</td>
                   <td class="diet"><span class="d vg">Vg</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Beans</strong>
                   </th>
-                  <td class="price">£5.60</td>
+                  <td class="price">£6.35</td>
                   <td class="diet"><span class="d vg">Vg</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Cheese</strong><br />
-                    Add Bacon +£1.10
+                    Add Bacon +£1.20
                   </th>
-                  <td class="price">£5.70</td>
+                  <td class="price">£6.50</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Beans and Cheese</strong>
                   </th>
-                  <td class="price">£6.80</td>
+                  <td class="price">£7.50</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Tuna Mayo</strong>
                   </th>
-                  <td class="price">£7.00</td>
+                  <td class="price">£7.80</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Tuna Mayo and Cheese</strong>
                   </th>
-                  <td class="price">£7.80</td>
+                  <td class="price">£8.80</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Chilli</strong>
                   </th>
-                  <td class="price">£7.00</td>
+                  <td class="price">£7.80</td>
                   <td class="diet"><span class="d vg">Vg</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Chilli and Cheese</strong>
                   </th>
-                  <td class="price">£7.80</td>
+                  <td class="price">£8.80</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <strong>Prawn Mayo - Seasonal</strong>
+                    <strong>Prawn Mayo - When Available</strong>
                   </th>
-                  <td class="price">£8.75</td>
+                  <td class="price">£9.75</td>
                   <td class="diet"><span class="d seafood">S</span></td>
                 </tr>
               </tbody>
             </table>
-          </section>
+          </section><!-- Rolls 
           <section x-data="{ open: false }">
-            <!-- Rolls -->
+            
             <h3 class="buttont" x-on:click="open = ! open">Rolls</h3>
             <table class="step" x-show="open" x-transition>
               <tbody>
@@ -700,7 +708,7 @@ import Layout from "../components/layout.astro";
                 </tr>
               </tbody>
             </table>
-          </section>
+          </section>-->
           <section x-data="{ open: false }">
             <!-- Sides -->
             <h3 class="buttont" x-on:click="open = ! open">Cakes & Bakes</h3>
