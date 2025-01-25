@@ -20,6 +20,7 @@
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.22",
     "alpinejs": "^3.10.3",
+    "dotenv": "^16.4.7",
     "netlify-cli": "^12.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
