@@ -305,99 +305,87 @@ import Layout from "../components/layout.astro";
                   <td class="price">£3.50</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Chips</strong>
-                  </th>
-                  <td class="price"
-                    >Sml £2.50<br />
-                    Lrg £3.50</td
-                  >
-                  <td class="diet"><span class="d vg">Vg</span></td>
-                </tr>
               </tr>
             </tbody>
           </table>
           <section x-data="{ open: false }">
             <!-- Loaded chip -->
-            <h3 class="buttont" x-on:click="open = ! open">Loaded Chips</h3>
+            <h3 class="buttont" x-on:click="open = ! open">
+              Chips, Loaded Chips, Halloumi
+            </h3>
             <table class="step" x-show="open" x-transition>
               <tbody>
                 <tr>
                   <th scope="row">
+                    <strong>Chips</strong>
+                  </th>
+                  <td class="price"
+                    >Sml £3.00<br />
+                    Lrg £4.00</td
+                  >
+                  <td class="diet"><span class="d vg">Vg</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">
                     <strong>Cheese and Bacon</strong>
                   </th>
-                  <td class="price">£4.90</td>
+                  <td class="price">£5.40</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Cheese and Beans</strong>
                   </th>
-                  <td class="price">£4.80</td>
+                  <td class="price">£5.4</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Chilli & Cheese</strong>
                   </th>
-                  <td class="price">£6.90</td>
+                  <td class="price">£7.80</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Chorizo & Halloumi</strong>
                   </th>
-                  <td class="price">£5.90</td>
+                  <td class="price">£7.70</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Cheese</strong>
                   </th>
-                  <td class="price">£3.90</td>
+                  <td class="price">£4.40</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Beans</strong>
                   </th>
-                  <td class="price">£3.70</td>
+                  <td class="price">£4.40</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Chilli</strong>
                   </th>
-                  <td class="price">£5.90</td>
+                  <td class="price">£6.80</td>
                   <td class="diet"><span class="d vg">Vg</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Sweet Potato Fries</strong>
                   </th>
-                  <td class="price">£3.50</td>
+                  <td class="price">£4.00</td>
                   <td class="diet"><span class="d vg">Vg</span></td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <strong>Chip Butty</strong>
+                    <strong>Halloumi Bites</strong>
                   </th>
-                  <td class="price">£3.00</td>
-                  <td class="diet"><span class="d vg">Vg</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Double Egg and Chips</strong>
-                  </th>
-                  <td class="price">£4.70</td>
-                  <td class="diet"><span class="d v">V</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Halloumi Roll or Bites</strong>
-                  </th>
-                  <td class="price">£4.50</td>
+                  <td class="price">£4.95</td>
                   <td class="diet"><span class="d v">V</span></td>
                 </tr>
               </tbody>
@@ -457,23 +445,23 @@ import Layout from "../components/layout.astro";
                 <tr>
                   <th scope="row">
                     <strong>Set Breakfast</strong><br />
-                    Saus, Bacon, Egg, Mush, Tom, Beans, Fr&nbsp;Bread.
+                    Sausage, Bacon, Egg, Mushroom, Tomato, Beans, Fried Bread
                   </th>
-                  <td class="price">£5.80</td>
+                  <td class="price">£6.80</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Large Breakfast</strong><br />
-                    Extra Sausage, Bacon and Hash Brown
+                    Added Sausage, Bacon, Hash Brown, Large Beans
                   </th>
-                  <td class="price">£7.70</td>
+                  <td class="price">£9.90</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Build a Breakfast</strong><br />
-                    Minimum 4 Items. £1.10 per item.
+                    Minimum 4 Items. £1.20 per item.
                   </th>
                   <td class="price"></td>
                   <td class="diet"></td>
@@ -482,54 +470,47 @@ import Layout from "../components/layout.astro";
                   <th scope="row">
                     <strong>Sausage, Bacon & Egg Roll</strong>
                   </th>
-                  <td class="price">£5.00</td>
+                  <td class="price">£5.50</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Sausage & Bacon Roll</strong>
                   </th>
-                  <td class="price">£4.20</td>
+                  <td class="price">£4.60</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Bacon & Egg Roll</strong>
                   </th>
-                  <td class="price">£4.20</td>
+                  <td class="price">£4.60</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Sausage & Egg Roll</strong>
                   </th>
-                  <td class="price">£4.20</td>
+                  <td class="price">£4.60</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <strong>Sausage Roll</strong>
+                    <strong>Sausage in a Roll</strong>
                   </th>
-                  <td class="price">£3.00</td>
+                  <td class="price">£3.50</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Bacon Roll</strong>
                   </th>
-                  <td class="price">£3.00</td>
+                  <td class="price">£3.50</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
-                    <strong>Egg Roll</strong>
-                  </th>
-                  <td class="price">£2.60</td>
-                  <td class="diet"><span class="d v">V</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    Add extra items to your roll from the list.
+                    Add extra items to your roll from the Breakfast Items list
                   </th>
                   <td class="price"></td>
                   <td class="diet"></td>
@@ -537,22 +518,22 @@ import Layout from "../components/layout.astro";
                 <tr>
                   <th scope="row">
                     <strong>Breakfast Wrap</strong><br />
-                    Choose 4 Items
+                    Choose 4 Items from the Breakfast Items list
                   </th>
-                  <td class="price">£5.70</td>
+                  <td class="price">£6.30</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Breakfast Items</strong><br />
                     Bacon, Sausage, Egg, Hashbrown, Beans, Potato Slices, Tomato,
-                    Mushrooms, Black Pudding, Fried Bread, Toast
+                    Mushrooms, Black Pudding, Fried Bread
                   </th>
-                  <td class="price"><br />£1.10 each</td>
+                  <td class="price"><br />£1.20 each</td>
                   <td class="diet"></td>
                 </tr>
                 <tr>
-                  <th scope="row"> Cheese Slice</th>
+                  <th scope="row"> Cheese Slices</th>
                   <td class="price">30p each</td>
                   <td class="diet"></td>
                 </tr>
@@ -719,15 +700,28 @@ import Layout from "../components/layout.astro";
           </section>
           <section x-data="{ open: false }">
             <!-- Sides -->
-            <h3 class="buttont" x-on:click="open = ! open">Sides</h3>
-            <table class="step" x-show="open" x-transition>
+            <h3 class="buttont" x-on:click="open = ! open">Cakes & Bakes</h3>
+            <table class="doubled step" x-show="open" x-transition>
               <tbody>
                 <tr>
                   <th scope="row">
+                    <strong>Slice of Cake</strong>
+                  </th>
+                  <td class="price">£2.95</td>
+                  <th scope="row">
                     <strong>Toasted Tea Cake</strong>
                   </th>
-                  <td class="price">£2.75</td>
-                  <td class="diet"><span class="d v">V</span></td>
+                  <td class="price">£2.85</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <strong>Homemade Sausage Roll</strong>
+                  </th>
+                  <td class="price">£2.80</td>
+                  <th scope="row">
+                    <strong>Homemade Scone</strong>
+                  </th>
+                  <td class="price">£2.50</td>
                 </tr>
               </tbody>
             </table>
