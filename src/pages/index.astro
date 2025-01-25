@@ -841,177 +841,182 @@ import Layout from "../components/layout.astro";
                   </th>
                   <td class="price">£3.60</td>
                   <th scope="row">
-                    <strong>Hot Chocolate</strong>
+                    <strong
+                      >Hot Chocolate<br /><small>£1.90 for kids</small></strong
+                    >
                   </th>
-                  <td class="price">£3.30 <small>(£1.90 for kids)</small></td>
+                  <td class="price">£3.30</td>
                 </tr>
                 <tr>
                   <th scope="row">
                     <strong>Flat White</strong>
                   </th>
                   <td class="price">£3.20</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Cream</strong>
-                  </th>
-                  <td class="price">30p</td>
-                  <th scope="row">
-                    <strong>Marshmallows</strong>
-                  </th>
-                  <td class="price">30p</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Extra Shot</strong>
-                  </th>
-                  <td class="price">60p</td>
-                  <th scope="row">
-                    <strong
-                      >Dairy Free Alternative<br /><small>Oat milk</small
-                      ></strong
-                    >
-                  </th>
-                  <td class="price">40p</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Hot Milk</strong>
-                  </th>
-                  <td class="price">£2.20</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Tea</strong>
-                  </th>
-                  <td class="price">£1.65</td>
-                  <th scope="row">
-                    <strong>Specialty Teas</strong>
-                  </th>
-                  <td class="price">£2.20</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Extra Cup<br /><small>Empty</small></strong>
-                  </th>
-                  <td class="price">30p</td>
-                </tr>
+                </tr><small>
+                  <tr>
+                    <th scope="row">
+                      <strong><small>Cream</small></strong>
+                    </th>
+                    <td class="price"><small>30p</small></td>
+                    <th scope="row">
+                      <strong><small>Marshmallows</small></strong>
+                    </th>
+                    <td class="price"><small>30p</small></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong><small>Extra Shot</small></strong>
+                    </th>
+                    <td class="price"><small>60p</small></td>
+                    <th scope="row">
+                      <strong
+                        ><small>Dairy Free Alternative</small><br /><small
+                          >Oat milk</small
+                        ></strong
+                      >
+                    </th>
+                    <td class="price"><small>40p</small></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Hot Milk</strong>
+                    </th>
+                    <td class="price">£2.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Tea</strong>
+                    </th>
+                    <td class="price">£1.65</td>
+                    <th scope="row">
+                      <strong>Specialty Teas</strong>
+                    </th>
+                    <td class="price">£2.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Extra Empty Cup</strong>
+                    </th>
+                    <td class="price">30p</td>
+                  </tr>
+                </small>
               </tbody>
             </table>
+            <section x-data="{ open: false }">
+              <h3 class="buttonc" x-on:click="open = ! open">Syrups</h3>
+              <table class="doubled stept" x-show="open" x-transition>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <strong>Chocolate</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Strawberry</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Banana</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Salted Caramel</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Vanilla</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Caramel</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Hazelnut</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Gingerbread</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Amaretto</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Cinnamon</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Mint</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Coconut</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Honeycomb</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Spiced Chai</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Spiced Pumpkin</strong>
+                    </th>
+                    <th scope="row">
+                      <strong>Coffee</strong>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section x-data="{ open: false }">
+              <h3 class="buttonc" x-on:click="open = ! open">Cold Drinks</h3>
+              <table class="doubled stept" x-show="open" x-transition>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <strong
+                        >Fresh Smoothies <span class="d v">V</span>
+                        <span class="d vg">Vg</span>
+                      </strong>
+                    </th>
+                    <td class="price">£4.35</td>
+                    <th scope="row">
+                      <strong
+                        >Fun Shakes<br /><small
+                          >Add a cream topping for 30p</small
+                        ></strong
+                      >
+                    </th>
+                    <td class="price">£4.60</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <strong>Frappes <span class="d v">V</span></strong>
+                    </th>
+                    <td class="price">£4.35</td>
+                    <th scope="row">
+                      <strong>Thick shakes</strong>
+                    </th>
+                    <td class="price">£4.60</td>
+                  </tr>
+                  <tr>
+                    <td> Other cold drinks available in fridges </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
           </section>
-          <section x-data="{ open: false }">
-            <h3 class="buttonc" x-on:click="open = ! open">Syrups</h3>
-            <table class="doubled stept" x-show="open" x-transition>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <strong>Chocolate</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Strawberry</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Banana</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Salted Caramel</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Vanilla</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Caramel</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Hazelnut</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Gingerbread</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Amaretto</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Cinnamon</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Mint</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Coconut</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Honeycomb</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Spiced Chai</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Spiced Pumpkin</strong>
-                  </th>
-                  <th scope="row">
-                    <strong>Coffee</strong>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section x-data="{ open: false }">
-            <h3 class="buttonc" x-on:click="open = ! open">Cold Drinks</h3>
-            <table class="doubled stept" x-show="open" x-transition>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <strong>Fun Shakes</strong>
-                  </th>
-                  <td class="price">£4.50</td>
-                  <th scope="row">
-                    <strong>Frappes <span class="d v">V</span></strong>
-                  </th>
-                  <td class="price">£4.25</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Thick shakes</strong>
-                  </th>
-                  <td class="price">£4.50</td>
-                  <th scope="row">
-                    <strong
-                      >Fresh Smoothies <span class="d v">V</span>
-                      <span class="d vg">Vg</span>
-                    </strong>
-                  </th>
-                  <td class="price">£4.25</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Iced Latte</strong>
-                  </th>
-                  <td class="price">£3.50</td>
-                </tr>
-              </tbody>
-            </table>
+          <section class="types">
+            <span class="d v">V</span> Vegetarian
+            <span class="d vg">Vg</span> Vegan
+            <span class="d seafood">S</span> Seafood
           </section>
         </div>
-        <section class="types">
-          <span class="d v">V</span> Vegetarian
-          <span class="d vg">Vg</span> Vegan
-          <span class="d seafood">S</span> Seafood
-        </section>
       </section>
     </section>
   </main>
