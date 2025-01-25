@@ -215,116 +215,133 @@ import Layout from "../components/layout.astro";
                 <th scope="row">
                   <strong>1/4lb Burger</strong><br />
                 </th>
-                <td class="price">£4.95</td>
+                <td class="price">£5.95</td>
                 <td class="diet"></td>
               </tr>
               <tr>
                 <th scope="row">
                   <strong>1/2lb Burger</strong><br />
                 </th>
-                <td class="price">£6.00</td>
+                <td class="price">£6.95</td>
                 <td class="diet"></td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Veggie Burger</strong><br />
+                  <strong
+                    >Veggie Burger<br /><small>Lentils, Vegetables</small
+                    ></strong
+                  ><br />
                 </th>
-                <td class="price">£5.95</td>
+                <td class="price">£6.50</td>
                 <td class="diet"><span class="d v">V</span></td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Vegan Burger</strong><br />
+                  <strong
+                    >Vegan Burger<br /><small>BBQ, Lentils, Mixed Seeds</small
+                    ></strong
+                  ><br />
                 </th>
-                <td class="price">£5.95</td>
+                <td class="price">£6.75</td>
                 <td class="diet"><span class="d vg">Vg</span></td>
               </tr>
 
               <tr>
                 <th scope="row">
                   <strong>Add Extras to any Burger</strong><br />
-                  + Onions 20p, + Cheese 30p/60p, + Bacon £1.10, + Chilli £2.00<br
+                  + Onions 20p, + Cheese 30p/60p, + Bacon £1.20, + Chilli £3.00<br
                   />
-                  + Mushrooms £1.10, + Egg £1.10, + Hashbrown £1.10
+                  + Mushrooms £1.20, + Egg £1.20, + Hashbrown £1.20
                 </th>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Scampi (Wholetail) + Chips</strong>
+                  <strong>Wholetail Scampi & Chips</strong>
                 </th>
-                <td class="price">£7.95</td>
+                <td class="price">£8.75</td>
                 <td class="diet"><span class="d seafood">S</span></td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Fish Goujon + Chips</strong>
+                  <strong>Fish Goujon & Chips</strong>
                 </th>
-                <td class="price">£7.95</td>
+                <td class="price">£8.75</td>
                 <td class="diet"></td>
               </tr>
               <tr>
                 <th scope="row">
-                  <strong>Ham, Egg and Chips</strong>
+                  <strong>Ham, Egg & Chips</strong>
                 </th>
-                <td class="price">£6.95</td>
+                <td class="price">£7.75</td>
                 <td class="diet"></td>
+              </tr>
+              <tr>
+                <tr>
+                  <th scope="row">
+                    <strong
+                      >Halloumi Wrap<br /><small
+                        >Comes with sweet chilli sauce</small
+                      >
+                    </strong>
+                  </th>
+                  <td class="price">£6.95</td>
+                  <td class="diet"></td>
+                </tr>
               </tr>
               <tr>
                 <th scope="row">
                   <strong>Southern Fried Chicken Wrap</strong>
                 </th>
-                <td class="price">£6.25</td>
+                <td class="price">£6.95</td>
                 <td class="diet"></td>
               </tr>
               <tr>
                 <tr>
                   <th scope="row">
-                    <strong>Halloumi Wrap</strong>
+                    <strong>Soup & Roll </strong>
                   </th>
-                  <td class="price">£6.25</td>
+                  <td class="price">£5.50</td>
                   <td class="diet"></td>
                 </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Sausage and Chips</strong>
-                  </th>
-                  <td class="price">£4.70</td>
-                  <td class="diet"><span class="d v">V</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Chicken Chunks & Chips</strong>
-                  </th>
-                  <td class="price">£5.95</td>
-                  <td class="diet"></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Beer Battered Onion Rings</strong>
-                  </th>
-                  <td class="price">£3.50</td>
-                  <td class="diet"><span class="d v">V</span></td>
-                </tr>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Chips</strong>
+                </th>
+                <td class="price"
+                  >Sml £3.00<br />
+                  Lrg £4.00</td
+                >
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Sweet Potato Fries</strong>
+                </th>
+                <td class="price">£4.00</td>
+                <td class="diet"><span class="d vg">Vg</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Halloumi Bites</strong>
+                </th>
+                <td class="price">£4.95</td>
+                <td class="diet"><span class="d v">V</span></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <strong>Kids Meals</strong>
+                </th>
+                <td class="price">£4.50</td>
+                <td class="diet"></td>
               </tr>
             </tbody>
           </table>
           <section x-data="{ open: false }">
             <!-- Loaded chip -->
-            <h3 class="buttont" x-on:click="open = ! open">
-              Chips, Loaded Chips, Halloumi
-            </h3>
+            <h3 class="buttont" x-on:click="open = ! open">Loaded Chips</h3>
             <table class="step" x-show="open" x-transition>
               <tbody>
-                <tr>
-                  <th scope="row">
-                    <strong>Chips</strong>
-                  </th>
-                  <td class="price"
-                    >Sml £3.00<br />
-                    Lrg £4.00</td
-                  >
-                  <td class="diet"><span class="d vg">Vg</span></td>
-                </tr>
                 <tr>
                   <th scope="row">
                     <strong>Cheese and Bacon</strong>
@@ -374,25 +391,11 @@ import Layout from "../components/layout.astro";
                   <td class="price">£6.80</td>
                   <td class="diet"><span class="d vg">Vg</span></td>
                 </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Sweet Potato Fries</strong>
-                  </th>
-                  <td class="price">£4.00</td>
-                  <td class="diet"><span class="d vg">Vg</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Halloumi Bites</strong>
-                  </th>
-                  <td class="price">£4.95</td>
-                  <td class="diet"><span class="d v">V</span></td>
-                </tr>
               </tbody>
             </table>
           </section>
+          <!-- Childrens Meals
           <section x-data="{ open: false }">
-            <!-- Childrens Meals -->
             <h3 class="buttont" x-on:click="open = ! open">Kids Meals</h3>
             <div class="stept" x-show="open" x-transition>
               <h4>
@@ -434,7 +437,7 @@ import Layout from "../components/layout.astro";
                 </table>
               </section>
             </div>
-          </section>
+          </section> -->
           <section x-data="{ open: false }">
             <!-- All day break -->
             <h3 class="buttont" x-on:click="open = ! open">
