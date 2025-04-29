@@ -3,6 +3,14 @@ import Layout from "../components/layout.astro";
 ---
 
 <style>
+  .header-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
   .steps {
     background: var(--light);
     border-bottom: 1px solid var(--lightBorder);
@@ -32,7 +40,6 @@ import Layout from "../components/layout.astro";
     background: var(--white);
     border: 1px solid var(--lightBorder);
     border-radius: 4px;
-    /* display: flex; */
     flex-direction: column;
     font-size: 0.75rem;
     padding: 1rem 1.5rem 1.5rem;
@@ -43,7 +50,6 @@ import Layout from "../components/layout.astro";
     background: var(--white);
     border: 1px solid var(--lightBorder);
     border-radius: 4px;
-    /* display: flex; */
     flex-direction: column;
     font-size: 0.75rem;
     padding: 0.5rem 1rem 1rem;
@@ -61,38 +67,32 @@ import Layout from "../components/layout.astro";
     background: var(--primary);
     border-radius: 4px;
     color: var(--button);
-    /* display: inline-block; */
     font-weight: 600;
     margin-top: auto;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    /* width: max-content; */
   }
 
   .buttont {
     background: var(--lightBorder);
     border-radius: 4px;
     color: var(--button);
-    /* display: inline-block; */
     font-weight: 600;
     margin-top: auto;
     padding: 0.5rem 1rem;
     margin: 0 0 0.5rem;
     text-decoration: none;
-    /* width: max-content; */
   }
 
   .buttonc {
     background: #caf0f8;
     border-radius: 4px;
     color: var(--first-color);
-    /* display: inline-block; */
     font-weight: 600;
     margin-top: auto;
     padding: 0.5rem 1rem;
     margin: 0 0 0.5rem;
     text-decoration: none;
-    /* width: max-content; */
   }
 
   :root {
@@ -126,8 +126,6 @@ import Layout from "../components/layout.astro";
   }
 
   section {
-    /* border-top: calc(0.0625 * var(--rem)) dashed #aaa;
-    border-bottom: calc(0.0625 * var(--rem)) dashed #aaa; */
   }
 
   section table {
@@ -205,6 +203,7 @@ import Layout from "../components/layout.astro";
   home
   x-cloak
 >
+  <img src="https://www.fabulousnorfolk.co.uk/wp-content/uploads/2022/12/Discover-the-fabulous-Mundesley-Beach-East-Norfolk.jpg" alt="Mundesley Beach" class="header-image" />
   <h2>(Prices subject to change. Please check the boards)</h2>
   <p class="notice">
     Please don't eat or drink takeaway food at the tables.
@@ -337,20 +336,6 @@ import Layout from "../components/layout.astro";
                 <td class="price">£4.95</td>
                 <td class="diet"><span class="d v">V</span></td>
               </tr>
-              <!--<tr>
-                <th scope="row">
-                  <strong>Kids Meals</strong>
-                </th>
-                <td class="price">£5.20</td>
-                <td class="diet"></td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <strong>Freshly Filled Rolls available</strong>
-                </th>
-                <td class="price"></td>
-                <td class="diet"></td>
-              </tr>-->
             </tbody>
           </table>
           <section x-data="{ open: false }">
@@ -744,74 +729,6 @@ import Layout from "../components/layout.astro";
               </tbody>
             </table>
           </section>
-          <!-- Sauces
-          <section x-data="{ open: false }">
-            <h3 class="buttont" x-on:click="open = ! open">Sauces</h3>
-            <table class="doubled step" x-show="open" x-transition>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <strong>Mayonnaise</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                  <th scope="row">
-                    <strong>Garlic Mayonnaise</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>BBQ Sauce</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                  <th scope="row">
-                    <strong>Vegan Mayonnaise</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Sweet Chilli Sauce</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                  <th scope="row">
-                    <strong>Buffalo Hot Sauce</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Burger Sauce</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                  <th scope="row">
-                    <strong>Mustard</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <strong>Ketchup</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                  <th scope="row">
-                    <strong>Brown Sauce</strong>
-                  </th>
-                  <td class="price"></td>
-                  <td class="diet"></td>
-                </tr>
-              </tbody>
-            </table>
-          </section> -->
         </section>
       </section>
 
