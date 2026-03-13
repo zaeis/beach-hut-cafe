@@ -1,0 +1,22 @@
+{
+  "name": "my-astro-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.6.5",
+    "@astrojs/preact": "^5.0.0",
+    "@astrojs/react": "^5.0.0",
+    "@astrojs/sitemap": "^3.7.1",
+    "astro": "^5.0.0",
+    "preact": "^10.29.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}

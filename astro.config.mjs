@@ -1,15 +1,14 @@
 import { defineConfig } from "astro/config";
-import alpine from '@astrojs/alpinejs';
-import preact from "@astrojs/preact";
-import sitemap from '@astrojs/sitemap';
 import react from "@astrojs/react";
+import sitemap from '@astrojs/sitemap';
+import netlify from '@astrojs/netlify';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://beach-hut-cafe.com',
-  integrations: [alpine(), preact(), sitemap({
-    canonicalURL: 'https://beach-hut-cafe.com'
-  }), react()],
-  output: 'server', // or 'hybrid' if you want a mix of static and SSR
+  integrations: [
+    react(), // Just use React for now to stop the conflict
+    sitemap({ canonicalURL: 'https://beach-hut-cafe.com' })
+  ],
+  output: 'server',
   adapter: netlify(),
 });
