@@ -9,5 +9,7 @@ export default defineConfig({
   site: 'https://beach-hut-cafe.com',
   integrations: [alpine(), preact(), sitemap({
     canonicalURL: 'https://beach-hut-cafe.com'
-  }), react()]
+  }), react()],
+  output: 'server', // or 'hybrid' if you want a mix of static and SSR
+  adapter: netlify(),
 });
