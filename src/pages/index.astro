@@ -1,22 +1,43 @@
 ---
-// This is the "Frontmatter" - your JavaScript/TypeScript goes here!
-const pageTitle = "My New Astro Site";
+import { Image } from 'astro:assets';
+
+// Import all 5 of your images
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+
+const images = [img1, img2, img3, img4, img5];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<h1>Welcome to Astro</h1>
-		<p>This is my first page running on my existing Netlify setup!</p>
-		
-		<nav>
-			<a href="/">Home</a>
-			<a href="/about/">About</a>
-		</nav>
-	</body>
-</html>
+<style>
+  .image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;             /* Slightly more space for a clean look */
+    width: 100%;
+    max-width: 800px;        /* Increased slightly for better desktop viewing */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: a very light gray background */
+  }
+
+  .responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Optional: adds a subtle shadow to make the PNGs "pop" */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); 
+  }
+</style>
+
+<div class="image-stack">
+  {images.map((pic, index) => (
+    <Image 
+      src={pic} 
+      alt={`Beach Hut Cafe photo ${index + 1}`} 
+      class="responsive-img"
+    />
+  ))}
+</div>
