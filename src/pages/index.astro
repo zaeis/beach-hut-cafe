@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import '../styles/global.css'; // This links your new CSS file
 
 // Import all 5 of your images
 import img1 from '../assets/1.png';
@@ -10,28 +11,14 @@ import img5 from '../assets/5.png';
 
 const images = [img1, img2, img3, img4, img5];
 ---
-
-<style>
-  .image-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;             /* Slightly more space for a clean look */
-    width: 100%;
-    max-width: 800px;        /* Increased slightly for better desktop viewing */
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9; /* Optional: a very light gray background */
-  }
-
-  .responsive-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* Optional: adds a subtle shadow to make the PNGs "pop" */
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); 
-  }
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beach Hut Cafe</title>
+  </head>
+  <body>
 <div class="image-stack">
   {images.map((pic, index) => (
     <Image 
@@ -45,78 +32,13 @@ const images = [img1, img2, img3, img4, img5];
 <div id="announcement-modal" class="modal-overlay">
   <div class="modal-content">
     <button id="close-modal" class="close-btn">&times;</button>
-    <h2>Notice</h2>
+    <h2>Hello</h2>
     <p>Prices may vary from this website.</p>
-    <p>Some items are only available in the morning/afternoon.</p>
+    <p>Some items are only available in the mornings/afternoons.</p>
     <button id="close-btn-main" class="ok-btn">Understood</button>
   </div>
 </div>
 
-<style>
-  /* 2. The CSS Styling */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dims the background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Keeps it on top of images */
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-
-  .modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 90%;
-    width: 400px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
-
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  .ok-btn {
-    margin-top: 1.5rem;
-    background: #000; /* Matches a clean cafe aesthetic */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-
-  /* Hidden State */
-  .modal-hidden {
-    display: none;
-  }
-</style>
-
-<script>
-  // 3. The Logic
-  const modal = document.getElementById('announcement-modal');
-  const closeX = document.getElementById('close-modal');
-  const closeBtn = document.getElementById('close-btn-main');
-
-  function closeModal() {
-    modal.classList.add('modal-hidden');
-  }
-
-  closeX.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
-</script>
+<script src="../scripts/modal.js"></script>
+</body>
+</html>
